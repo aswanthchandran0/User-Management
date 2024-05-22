@@ -1,0 +1,10 @@
+.adminPage{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(0,31,141);
+    background: linear-gradient(0deg, rgba(0,31,141,1) 0%, rgba(154,159,185,1) 0%);
+}
+

@@ -1,0 +1,27 @@
+.profilePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(0,31,141);
+    background: linear-gradient(0deg, rgba(0,31,141,1) 0%, rgba(66,0,141,1) 18%);
+}
+
+.profile-nav-links{
+    list-style-type: none;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+}
+
+
+.profile-nav-links li a:hover{
+    color: aliceblue;
+}
+
+.profile-nav-links li a{
+    color: rgba(255, 255, 255, 0.623);
+    text-decoration: none;
+    font-size: 15px;
+
+}

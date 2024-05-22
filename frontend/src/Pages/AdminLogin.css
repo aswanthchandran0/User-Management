@@ -1,0 +1,10 @@
+.admin-loginPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://github.com/bedimcode/login-form/blob/main/assets/img/login-bg.png?raw=true');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,96 @@
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light user-header">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" style="color: beige;">Admin Dashboard <span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+        <form class="d-flex" role="search">
+        
+<input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline" type="button" id="searchButton" style="color: white;">Search</button>
+      </form>
+
+  
+    <a href="/user"><button type="submit" class="btn" style="color: azure; background-color:  #9896f1;">Home</button></a>      
+    </div>
+
+  </nav>
+</header>
+
+<div class="mytable p-5" >
+  <table class="table deletion">
+  <thead>
+    <tr>
+      <th scope="col">username</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr class="user-row">
+      <td class="username" > {{this.username}}</td>
+      <td class="email">{{this.email}}</td>
+
+      <td>
+        <button class="btn btn-primary"><a href="/edituser/edit/{{this._id}}" style="color: white;">Edit</a></button>
+        
+       <form action="/admin/delete/{{this._id}}" method="post" style="">  
+       <button type="submit" class="btn btn-danger deletebtn" style="width: 56px; font-size: small;">Delete</button>
+        </form> 
+       
+      </td>
+    </tr>
+
+
+    {{/each}}
+  </tbody>
+
+</table>
+</div>
+<script>
+  const deleteButtons = document.querySelectorAll('.deletebtn');
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const confirmed = confirm('Are you sure you want to delete this user?');
+      if (confirmed == true) {
+        button.parentNode.submit();
+      }
+    });
+  });
+</script>
+
+
+
+<script>     
+
+
+
+$(document).ready(function() {
+  $('#searchButton').on('click', function() {
+    const searchQuery = $('#searchInput').val().trim().toLowerCase();
+
+
+    $('.user-row').each(function() {
+      const username = $(this).find('.username').text().toLowerCase();
+      const email = $(this).find('.email').text().toLowerCase();
+
+      if (username.includes(searchQuery) || email.includes(searchQuery)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+});
+
+</script>

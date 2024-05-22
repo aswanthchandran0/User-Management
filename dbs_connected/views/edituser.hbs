@@ -1,0 +1,23 @@
+
+<div class="wrapper">
+  <div class="con">
+    <!--login form-->
+
+    <form class="form login-form" action="/edituser/update/{{user._id}}" method="post">
+      <div class="mb-3">
+        <label for="email" class="form-label ">username</label>
+        <input  type="text" class="form-control" name="username" value="{{user.username}}" required style="background: transparent; color: azure;">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label ">Email</label>
+        <input  type="email" class="form-control" name="email" value="{{user.email}}" required style="background: transparent; color: azure;">
+      </div>
+      <div class="mb-3">
+       
+      <button type="submit" class="btn  btn-md btn-block" style="color: azure; background-color:  #9896f1; margin-top: 10px;">save changes</button>
+      
+    </form>
+  
+ 
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="con">
+    <!--login form-->
+       <div class="h1" style="color: white; text-align: center;">Admin</div>
+    <form class="form login-form" action="/alogin/logined" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ">Email address</label>
+        <input  type="email" class="form-control" name="email" style="background: transparent; color: azure;">
+      
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input  type="password" class="form-control" name="password" style="background: transparent; box-shadow: #005792; color: azure;">
+        
+      </div>
+      <button type="submit" class="btn" style="color: azure; background-color:  #9896f1;">login</button>
+        <div class="error-message" style="color: tomato;">{{aerror}}</div>
+
+     
+    </form>
+  
+ 
+  </div>
+</div>
+ 

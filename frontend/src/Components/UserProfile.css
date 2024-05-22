@@ -1,0 +1,53 @@
+.profile{
+ width: 30%;
+ height: 80vh;
+ border-radius: 10px;
+ background-color: aliceblue;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.avathar{
+  width: 150px;
+  height: 150px;
+  border: 3px solid rgb(92, 0, 141);
+  border-radius:50%;
+  overflow: hidden;
+}
+.profile img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+  }
+
+
+  
+.profile-inputBox{
+    background: transparent;
+    border: 2px solid rgb(92, 0, 141);
+    border-radius: 20px;
+    height: 35px;
+    width: 70%;
+    margin-top: 10px;
+    color: rgb(92, 0, 141);
+    padding-left: 10px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+.profile-inputBox::placeholder{
+    color: rgb(92, 0, 141);
+}
+
+
+.profile-Button{
+    background-color: rgb(92, 0, 141);
+    color: aliceblue;
+    height: 35px;
+    width: 70%;
+    border-radius: 20px;
+    border: none;
+    margin-top: 5px;
+    font-weight: 600;
+}

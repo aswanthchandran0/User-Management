@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="con">
+    <!--login form-->
+
+    <form class="form login-form" action="/login" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ">Email address</label>
+        <input  type="email" class="form-control" name="email" style="background: transparent; color: azure;">
+       <div class="error-message" style="color: tomato;">{{emailerror}}</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input  type="password" class="form-control" name="password" style="background: transparent; box-shadow: #005792; color: azure;">
+        <div class="error-message" style="color: tomato;">{{passworderror}}</div>
+      </div>
+      <button type="submit" class="btn" style="color: azure; background-color:  #9896f1;">login</button>
+        <div class="error-message" style="color: tomato;">{{error}}</div>
+      <div class="h6" style="margin-top: 10px;">don't have account <a href="#"  class="toggle-form">sign in</a> </div>
+     
+    </form>
+  
+  <!--regester form -->
+    <form class="sign-in  registration-form" action="/signin" method="post">
+       <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ">username</label>
+        <input  type="text" class="form-control" name="username" style="background: transparent; color: azure;">
+      </div>
+    
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ">email address</label>
+        <input  type="email" class="form-control" name="email" style="background: transparent; color: azure;">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input  type="password" class="form-control" name="password" style="background: transparent; box-shadow: #005792; color: azure;">
+      </div>
+      <div class="error-message" style="color: tomato;">{{errors}}</div>
+       <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Conform Password</label>
+        <input  type="password" class="form-control" name="cpassword" style="background: transparent; box-shadow: #005792; color: azure;">
+      </div>
+      <button type="submit" class="btn"  style="color: azure; background-color:  #9896f1;">sign in</button>
+      <div class="h6"  style="margin-top: 10px;">already have an account <a href="#" class="toggle-form">login</a> </div>
+      
+    </form>
+  </div>
+</div>
+  <script>
+          // jQuery function to toggle between login and registration forms
+      $('.toggle-form').click(function() {
+            $('.login-form, .registration-form').toggle();
+        });
+    </script>
